@@ -1,0 +1,13 @@
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+namespace_packages = true
+explicit_package_bases = true
+
+[tool.django-stubs]
+django_settings_module = "onlinejudge.onlinejudge.settings"
