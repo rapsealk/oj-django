@@ -1,1 +1,2 @@
-django~=4.1.1
+django~=3.2.15
+graphene-django~=2.15.0
