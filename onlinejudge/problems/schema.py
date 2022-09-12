@@ -52,7 +52,7 @@ class Query:
         return Submission.objects.all()
 
 
-class CreateSubmission(graphene.Mutation):
+class CreateSubmission(graphene.Mutation):  # type: ignore
     class Arguments:
         problem_id = graphene.Int()
         code = graphene.String()
@@ -82,5 +82,5 @@ class CreateSubmission(graphene.Mutation):
         return CreateSubmission(ok=ok, submission=submission)
 
 
-class Mutation(graphene.ObjectType):
+class Mutation(graphene.ObjectType):  # type: ignore
     create_submission = CreateSubmission.Field()
