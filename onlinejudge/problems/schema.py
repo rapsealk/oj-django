@@ -61,7 +61,9 @@ class CreateSubmission(graphene.Mutation):
     ok = graphene.Boolean()
     submission = graphene.Field(SubmissionType)
 
-    def mutate(root: "Query", info: Any, problem_id: int, code: str, language: str) -> "CreateSubmission":
+    def mutate(
+        root: "Query", info: Any, problem_id: int, code: str, language: str
+    ) -> "CreateSubmission":
         """
         mutation CreateSubmission {
             createSubmission(problemId: 1, code: "print('hi')", language: "python") {
