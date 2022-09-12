@@ -1,5 +1,6 @@
 [tool.isort]
 profile = "black"
+extend_skip = ["migrations"]
 
 [tool.mypy]
 plugins = ["mypy_django_plugin.main"]
@@ -8,6 +9,7 @@ strict = true
 ignore_missing_imports = true
 namespace_packages = true
 explicit_package_bases = true
+exclude = ["migrations"]
 
 [tool.django-stubs]
 django_settings_module = "config.settings"
