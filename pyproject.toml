@@ -10,4 +10,4 @@ namespace_packages = true
 explicit_package_bases = true
 
 [tool.django-stubs]
-django_settings_module = "onlinejudge.onlinejudge.settings"
+django_settings_module = "config.settings"
